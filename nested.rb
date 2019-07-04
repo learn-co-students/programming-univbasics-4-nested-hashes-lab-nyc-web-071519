@@ -14,6 +14,7 @@ def hopper
           :known_for => "Unix",
           :languages => ["C"]
         }
+      programmer_hash [:grace_hopper]
      }
 
 
@@ -36,6 +37,7 @@ def alan_kay_is_known_for
           :known_for => "Unix",
           :languages => ["C"]
         }
+        programmer_hash [:known_for] [:alan_kay]
      }
 end
 
@@ -54,6 +56,7 @@ def dennis_ritchies_language
           :known_for => "Unix",
           :languages => ["C"]
         }
+        programmer_hash [:dennis_ritchie] [:languages] [0]
      }
 end
 
@@ -67,7 +70,7 @@ def adding_matz
 	programmer_hash = 
  		{
         :grace_hopper => {
-          :known_for => "COBOL",
+          :known_for => "COBOL", 
           :languages => ["COBOL", "FORTRAN"]
         },
         :alan_kay => {
@@ -77,7 +80,13 @@ def adding_matz
         :dennis_ritchie => {
           :known_for => "Unix",
           :languages => ["C"]
-        }
+        },
+        
+      :yukihiro_matsumoto => {
+          :known_for => "Ruby"
+            :languages => ["LISP" , "C"]
+      }
+      programmer_hash
      }
 
     
@@ -91,13 +100,14 @@ def changing_alan
           :languages => ["COBOL", "FORTRAN"]
         },
         :alan_kay => {
-          :known_for => "Object Orientation",
+          :alans_new_info => "GUI",
           :languages => ["Smalltalk", "LISP"]
         },
         :dennis_ritchie => {
           :known_for => "Unix",
           :languages => ["C"]
         }
+        programmer_hash [:alans_new_info] ["GUI"]
      }
      #change what Alan Kay is :known_for to the value of the alans_new_info variable. 
      alans_new_info = "GUI"
@@ -120,6 +130,7 @@ def adding_to_dennis
           :known_for => "Unix",
           :languages => ["C"]
         }
+        programmer_hash [:known_for] [:languages].push("Assembly")
      }
 
 end
